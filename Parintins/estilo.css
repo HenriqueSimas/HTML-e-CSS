@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #092abd, #de2410); /* Gradiente moderno */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu .left-section,
+.menu .right-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1; /* Faz com que as seções ocupem o espaço disponível */
+}
+
+.menu .left-section {
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+}
+
+.menu .right-section {
+    justify-content: flex-end; /* Alinha os itens à direita */
+}
+
+.menu .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.menu .logo-container img {
+    width: 150px; /* Tamanho das imagens */
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.menu .logo-container img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsividade do Menu */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .menu .logo-container {
+        order: -1; /* Coloca o logo no topo em dispositivos móveis */
+        margin-bottom: 1rem;
+    }
+
+    .menu .logo-container img {
+        width: 100px; /* Reduz o tamanho das imagens para dispositivos móveis */
+        height: 100px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Estilo para o texto hero */
+.hero-text {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, rgba(9, 42, 189, 0.8), rgba(222, 36, 16, 0.8)); /* Mesmo gradiente do wrapper */
+    color: #fff;
+    margin-bottom: 0; /* Remove a margem inferior */
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0; /* Remove margens internas do h2 */
+}
+
+/* Wrapper para os cards */
+.wrapper {
+    background: linear-gradient(to right, rgba(9, 42, 189, 0.8), rgba(222, 36, 16, 0.8)); /* Mesmo gradiente do hero-text */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove o padding */
+    margin-bottom: 0; /* Remove a margem inferior */
+}
+
+/* Container dos cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem; /* Adiciona um espaçamento interno nos cards */
+}
+
+/* Estilo do card */
+.card {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagem do card */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: black; /* Cor do título */
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #092abd, #de2410); /* Gradiente*/
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 0; /* Remove a margem superior */
+}
+
+.rodape .left-section,
+.rodape .right-section {
+    flex: 1;
+    padding-bottom: 60px;
+    margin-top: 80px;
+}
+
+.rodape .left-section {
+    text-align: right;
+}
+
+.rodape .right-section {
+    text-align: left;
+}
+
+.estrela-azul {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 5px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Efeito de brilho */
+}
+
+.l, .r {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Responsividade do rodapé */
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .rodape .left-section,
+    .rodape .right-section {
+        text-align: center;
+    }
+}
+
+/* Responsividade para o texto hero */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+}
